@@ -583,5 +583,6 @@ npm start
 ---
 # Видеообзор
 
-    <h1>Видео на YouTube</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dfq-E7bDz24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Видео на YouTube
+
+[![Watch the video](https://img.youtube.com/vi/dfq-E7bDz24/0.jpg)](https://www.youtube.com/watch?v=dfq-E7bDz24)
