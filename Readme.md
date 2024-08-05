@@ -581,8 +581,6 @@ cd extjs
 npm start
 ```
 ---
-# Видеообзор
-
 ## Видео на YouTube
 
 [![Watch the video](https://img.youtube.com/vi/dfq-E7bDz24/0.jpg)](https://www.youtube.com/watch?v=dfq-E7bDz24)
