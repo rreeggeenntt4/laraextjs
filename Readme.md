@@ -552,5 +552,31 @@ npm start
 ---
 
 # Как скачать и запустить проект
+Скачайте или склонируйте проект https://github.com/rreeggeenntt4/laraextjs
+```sh
+git clone https://github.com/rreeggeenntt4/laraextjs
+cd laraextjs
+```
+Установиет необходимые модули на клиентской части Ext JS
+```sh
+npm install
+```
+Перейдите в папку backend и установите зависимости laravel
+```sh
+cd backend
+composer install
+npm install
+```
+* Переместите базу данных `laraextjs\backend\settings\database.sqlite` в папку `laraextjs\backend\database\database.sqlite` и удалите папку `backend\settings`
+* Скопируйте и переименуйте `laraextjs\backend\.env.example` в `laraextjs\backend\.env`
 
-
+Запустите серверную часть находясь в папке backend
+```sh
+npm run dev
+php artisan serve
+```
+Запустите клиентскую часть находясь в корне проекта laraextjs
+```sh
+cd ..
+npm start
+```
