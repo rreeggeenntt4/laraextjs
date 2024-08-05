@@ -52,8 +52,8 @@ npm install -g @sencha/ext-gen
 ```
 Создайте новое приложение:
 ```sh
-ext-gen app -a -t moderndesktop -n laraextjs
-cd laraextjs
+ext-gen app -a -t moderndesktop -n extjs
+cd extjs
 ```
 Запустите приложение, чтобы увидеть его в действии:
 ```sh
@@ -405,9 +405,9 @@ php artisan migrate:fresh
 
 ## 4 Настройте клиентскую часть ExtJS
 
-Скопируем имеющуюся папку laraextjs\app\desktop\src\view\personnel в laraextjs\app\desktop\src\view\user
+Скопируем имеющуюся папку laraextjs\extjs\app\desktop\src\view\personnel в laraextjs\extjs\app\desktop\src\view\user
 
-Переименуем имеющиеся фвайлы в папке  laraextjs\app\desktop\src\view\user, добавим к ним просто символ 2 и отредактируем:
+Переименуем имеющиеся фвайлы в папке  laraextjs\extjs\app\desktop\src\view\user, добавим к ним просто символ 2 и отредактируем:
 
 PersonnelView2.js:
 ```js
@@ -529,7 +529,7 @@ Ext.define('extjs.view.user.PersonnelViewStore2', {
     autoLoad: true
 });
 ```
-Добавим в меню laraextjs\resources\desktop\menu.json:
+Добавим в меню laraextjs\extjs\resources\desktop\menu.json:
 
 ```json
 {
@@ -575,8 +575,10 @@ npm install
 npm run dev
 php artisan serve
 ```
-Запустите клиентскую часть находясь в корне проекта laraextjs
+Запустите клиентскую часть находясь в папке extjs
 ```sh
-cd ..
+cd extjs
 npm start
 ```
+---
+# Видеообзор
