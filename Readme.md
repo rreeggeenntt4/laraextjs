@@ -649,3 +649,5 @@ Ext.define('extjs.view.user.PersonnelView2', {
 });
 ```
 
+Демонстрация:
+![Плагин фильтрации](https://github.com/rreeggeenntt4/laraextjs/blob/main/backend/settings/pluginfilter.png)
