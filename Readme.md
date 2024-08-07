@@ -584,3 +584,68 @@ npm start
 ## Видео на YouTube
 
 [![Watch the video](https://img.youtube.com/vi/dfq-E7bDz24/0.jpg)](https://www.youtube.com/watch?v=dfq-E7bDz24)
+
+
+## Дополнения:
+
+Добавим фильтрацию для колонки city:
+```js
+...
+gridfilters: true,
+...
+filter: 'string'
+...
+```
+У вас файл laraextjs\extjs\app\desktop\src\view\user\PersonnelView2.js теперь такой:
+```js
+Ext.define('extjs.view.user.PersonnelView2', {
+    extend: 'Ext.grid.Grid',
+    xtype: 'personnelview2',
+    cls: 'personnelview2',
+    requires: ['Ext.grid.rowedit.Plugin'],
+    controller: {type: 'personnelviewcontroller2'},
+    viewModel: {type: 'personnelviewmodel2'},
+    store: {type: 'personnelviewstore2'},
+    grouped: true,
+    groupFooter: {
+        xtype: 'gridsummaryrow'
+    },
+    plugins: {
+        gridfilters: true,
+        rowedit: {
+            autoConfirm: false
+        }
+    },
+    columns: [
+        {
+            text: 'ID',
+            dataIndex: 'id',
+            width: 50
+        },
+        {
+            text: 'Name',
+            dataIndex: 'name',
+            editable: true,
+            width: 100,
+            cell: {userCls: 'bold'}
+        },
+        {text: 'Email', dataIndex: 'email', editable: true, width: 230},
+        {
+            text: 'Education',
+            dataIndex: 'education',
+            editable: true,
+            width: 150
+        },
+        {
+            text: 'Cities',
+            dataIndex: 'cities',
+            width: 150,
+            filter: 'string'
+        }
+    ],
+    listeners: {
+        edit: 'onEditComplete'
+    }
+});
+```
+

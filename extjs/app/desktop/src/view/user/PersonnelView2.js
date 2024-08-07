@@ -1,44 +1,3 @@
-/* Ext.define('extjs.view.user.PersonnelView2',{
-    extend: 'Ext.grid.Grid',
-    xtype: 'personnelview2',
-    cls: 'personnelview2',
-    requires: ['Ext.grid.rowedit.Plugin'],
-    controller: {type: 'personnelviewcontroller2'},
-    viewModel: {type: 'personnelviewmodel2'},
-    store: {type: 'personnelviewstore2'},
-    grouped: true,
-    groupFooter: {
-        xtype: 'gridsummaryrow'
-    },
-    plugins: {
-        rowedit: {
-            autoConfirm: false
-        }
-    },
-    columns: [
-        {
-            text: 'Name',
-            dataIndex: 'name',
-            editable: true,
-            width: 100,
-            cell: {userCls: 'bold'}
-        },
-        {text: 'Email',dataIndex: 'email',editable: true, width: 230},
-        {
-            text: 'Phone',
-            dataIndex: 'phone',
-            editable: true,
-            width: 150
-        }
-    ],
-    listeners: {
-        canceledit: 'onEditCancelled'
-    }
-}); */
-
-
-
-
 Ext.define('extjs.view.user.PersonnelView2', {
     extend: 'Ext.grid.Grid',
     xtype: 'personnelview2',
@@ -52,6 +11,7 @@ Ext.define('extjs.view.user.PersonnelView2', {
         xtype: 'gridsummaryrow'
     },
     plugins: {
+        gridfilters: true,
         rowedit: {
             autoConfirm: false
         }
@@ -79,7 +39,8 @@ Ext.define('extjs.view.user.PersonnelView2', {
         {
             text: 'Cities',
             dataIndex: 'cities',
-            width: 150
+            width: 150,
+            filter: 'string'
         }
     ],
     listeners: {
